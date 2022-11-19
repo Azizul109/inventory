@@ -12,7 +12,7 @@
                                             Login
                                         </h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" @submit.prevent="login">
                                         <div class="form-group">
                                             <input
                                                 type="email"
@@ -20,6 +20,7 @@
                                                 id="exampleInputEmail"
                                                 aria-describedby="emailHelp"
                                                 placeholder="Enter Email Address"
+                                                v-model="form.email"
                                             />
                                         </div>
                                         <div class="form-group">
@@ -28,6 +29,7 @@
                                                 class="form-control"
                                                 id="exampleInputPassword"
                                                 placeholder="Password"
+                                                v-model="form.password"
                                             />
                                         </div>
                                         <div class="form-group">
@@ -81,6 +83,12 @@
     </div>
 </template>
 
-<script></script>
+<script>
+data() {
+    return {
+
+    }
+}
+</script>
 
 <style scoped></style>
